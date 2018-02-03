@@ -1,0 +1,15 @@
+<!-- ******************************************
+*  Author : Author   
+*  Created On : Sat Feb 03 2018
+*  File : user.html
+******************************************* -->
+
+{% extends "views/layout.html" %}
+  
+  {% block content %}
+  <h2> {{user.name}}</h2>
+  <form method = 'POST' action = '/users/{{user.id}}?_method=PATCH'>
+        <input name='name' value = ''/>
+        <button> change name </button>
+    </form>
+ {% endblock %}

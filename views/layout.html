@@ -1,0 +1,28 @@
+<!-- ******************************************
+*  Author : Author   
+*  Created On : Sat Feb 03 2018
+*  File : layout.html
+******************************************* -->
+<html>
+  <head>
+        <title>{{ title }}</title>
+        <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.css"/>
+        
+  </head>
+  <body>
+  
+   <div class='container'>
+          <h1>{{ title }}</h1>
+     <nav>
+      <ul class="nav nav-pills">
+        <a class="nav-item nav-link {% if path==='/' %} active {% endif %}" href='/'>Home</a> <span class="sr-only"></span></a>
+        <a class="nav-item nav-link {% if path==='/users' %} active {% endif %}" href='/users'>users</a><span></span></a>
+      </ul>
+          
+     </nav>
+      {%block content%}
+      {%endblock%}
+      
+  </div>
+  </body>
+</html>
